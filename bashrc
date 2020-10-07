@@ -1,24 +1,10 @@
 # =============================================================== #
 #
 # PERSONAL $HOME/.bashrc FILE for bash-3.0 (or later)
-# modded by LarryS
+# modded by https://github.com/hoppenschlop
 #
-# Last modified: Fri Oct 20 01:10 UK 2020
+# Last modified: Wednesday, 7 October 2020 (BST) 2020
 
-#  This file is normally read by interactive shells only.
-#+ Here is the place to define your aliases, functions and
-#+ other interactive features like your prompt.
-#
-#  The majority of the code here assumes you are on a GNU
-#+ system (most likely a Linux box) and is often based on code
-#+ found on Usenet or Internet.
-#
-#  See for instance:
-#  http://tldp.org/LDP/abs/html/index.html
-#  http://www.caliban.org/bash
-#  http://www.shelldorado.com/scripts/categories.html
-#  http://www.dotfiles.org
-#
 #  The choice of colors was done for a shell with a dark background
 #+ (white on black), and this is usually also suited for pure text-mode
 #+ consoles (no X server available). If you use a white background,
@@ -457,7 +443,5 @@ ex ()
 # sh-shell:bash
 # End: 
 
-neofetch
-export PATH="$PATH:/home/laurietom/bin"
-#sudo wifi-repair.sh
-#--w3m --source ~/Downloads/astolfo-new.jpg
+neofetch #--w3m --source ~/path/to/image
+export PATH="$PATH:~/bin"
