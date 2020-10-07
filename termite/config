@@ -1,0 +1,99 @@
+[options]
+allow_bold = true
+#audible_bell = false
+#bold_is_bright = true
+#cell_height_scale = 1.0
+#cell_width_scale = 1.0
+clickable_url = true
+dynamic_title = true
+font = Monospace 9
+#fullscreen = true
+#icon_name = terminal
+#mouse_autohide = false
+#scroll_on_output = false
+#scroll_on_keystroke = true
+# Length of the scrollback buffer, 0 disabled the scrollback buffer
+# and setting it to a negative value means "infinite scrollback"
+scrollback_lines = 10000
+#search_wrap = true
+#urgent_on_bell = true
+#hyperlinks = false
+
+# $BROWSER is used by default if set, with xdg-open as a fallback
+#browser = xdg-open
+
+# "system", "on" or "off"
+#cursor_blink = system
+
+# "block", "underline" or "ibeam"
+cursor_shape = ibeam
+
+# Hide links that are no longer valid in url select overlay mode
+#filter_unmatched_urls = true
+
+# Emit escape sequences for extra modified keys
+#modify_other_keys = false
+
+# set size hints for the window
+#size_hints = false
+
+# "off", "left" or "right"
+scrollbar = right
+
+
+[colors]
+
+# If both of these are unset, cursor falls back to the foreground color,
+# and cursor_foreground falls back to the background color.
+#cursor = #dcdccc
+#cursor_foreground = #dcdccc
+
+#foreground = #dcdccc
+#foreground_bold = #ffffff
+#background = #3f3f3f
+
+#links 20% background transparency (requires a compositor)
+background = rgba(63, 63, 63, 0.5)
+
+# If unset, will reverse foreground and background
+highlight = #2f2f2f
+
+# https://github.com/mashaal/wild-cherry
+
+#background= #1F1626
+#foreground= #FFFFFF
+#cursor=     #0F9DBA
+
+# black
+#color0  = #077fb1
+#color8  = #088bc1
+
+# red
+#color1  = #eb5cf9
+#color9  = #883cdb
+
+# green
+#color2  = #22d855
+#color10 = #29ad4e
+
+# yellow
+#color3  = #ffdf21
+#color11 = #c8a457
+
+# blue
+#color4  = #2746c2
+#color12 = #4b63c2
+
+# magenta
+#color5  = #38c7e4
+#color13 = #099bd7
+
+# cyan
+#color6  = #c9085d
+#color14 = #c43a77
+
+# white
+#color7  = #fff8dd
+#color15 = #c2bca8
+
+
