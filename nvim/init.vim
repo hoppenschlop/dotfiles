@@ -1,7 +1,6 @@
 " Specify a directory for plugins
 call plug#begin('~/.vim/plugged')
 
-Plug 'ghifarit53/tokyonight-vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "Plug 'neoclide/coc.vim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
 Plug 'scrooloose/nerdtree'
@@ -13,13 +12,32 @@ Plug 'airblade/vim-gitgutter'
 Plug 'ctrlpvim/ctrlp.vim' " fuzzy find files
 Plug 'scrooloose/nerdcommenter'
 "Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
-Plug 'itchyny/lightline.vim'
-
+"Plug 'itchyny/lightline.vim'
 Plug 'christoomey/vim-tmux-navigator'
-
-Plug 'morhetz/gruvbox'
-
 Plug 'HerringtonDarkholme/yats.vim' " TS Syntax
+
+Plug 'Yggdroot/indentLine'
+Plug 'mhinz/vim-startify'
+Plug 'psliwka/vim-smoothie'
+Plug 'luochen1990/rainbow'
+Plug 'hzchirs/vim-material'
+Plug 'gregsexton/MatchTag'
+Plug 'sheerun/vim-polyglot'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
+" colourschemes
+Plug 'morhetz/gruvbox'
+Plug 'ghifarit53/tokyonight-vim'
+Plug 'mhartington/oceanic-next'
+Plug 'habamax/vim-colors-lessthan'
+Plug 'sainnhe/sonokai'
+Plug 'lewis6991/moonlight.vim'
+Plug 'xdg/vim-darkluma'
+Plug 'kyoto-shift/film-noir'
+Plug 't184256/vim-boring'
+Plug 'kaicataldo/material.vim', { 'branch': 'main' }
+Plug 'whatyouhide/vim-gotham'
 
 " Initialize plugin system
 call plug#end()
@@ -70,21 +88,38 @@ noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
 set relativenumber
 
 set smarttab
-set cindent
+"set cindent
 set tabstop=2
 set shiftwidth=2
 " always uses spaces instead of tab characters
 set expandtab
 set termguicolors
 
+" tokyonight config
 let g:tokyonight_style = 'night' " available: night, storm
 let g:tokyonight_enable_italic = 1
+let g:tokyonight_cursor = 'red'
+let g:tokyonight_current_word = 'italic'
 
-colorscheme tokyonight
+" material config
+let g:material_theme_style = 'ocean-community' " 'palenight' | 'ocean' | 'lighter' | 'darker' | 'default-community' | 'palenight-community' | 'ocean-community' | 'lighter-community' | 'darker-community'
+let g:material_terminal_italics = 1
+let g:tokyonight_transparent_background = 1
 
-let g:lightline = {
-  \ 'colorscheme': 'tokyonight'
-  \ }
+" For Neovim 0.1.3 and 0.1.4 - https://github.com/neovim/neovim/pull/2198
+if (has('nvim'))
+  let $NVIM_TUI_ENABLE_TRUE_COLOR = 1
+endif
+
+colorscheme gotham
+
+let g:airline_powerline_fonts = 1
+
+"let g:lightline = { 'colorscheme': 'gotham' }
+
+"let g:lightline = {
+"  \ 'colorscheme': 'gotham'
+"  \ }
 
 " sync open file with NERDTree
 " " Check if NERDTree is open or active
@@ -239,3 +274,45 @@ autocmd filetype python nnoremap <F4> :w <bar> exec '!python '.shellescape('%')<
 autocmd filetype c nnoremap <F4> :w <bar> exec '!gcc '.shellescape('%').' -o '.shellescape('%:r').' && ./'.shellescape('%:r')<CR>
 autocmd filetype cpp nnoremap <F4> :w <bar> exec '!g++ '.shellescape('%').' -o '.shellescape('%:r').' && ./'.shellescape('%:r')<CR>
 
+" nerdcommenter settings
+let g:NERDCreateDefaultMappings = 1
+
+" indentLine
+let g:indentLine_char_list = ['▏', '¦', '┆', '┊']
+let g:indentLine_setColors = 0
+let g:indentLine_setConceal = 0                         " actually fix the annoying markdown links conversion
+let g:indentLine_fileTypeExclude = ['startify']
+
+"" startify
+let g:startify_padding_left = 10
+let g:startify_session_persistence = 1
+let g:startify_enable_special = 0
+let g:startify_change_to_vcs_root = 1
+let g:startify_lists = [
+    \ { 'type': 'dir'       },
+    \ { 'type': 'files'     },
+    \ { 'type': 'sessions'  },
+    \ { 'type': 'bookmarks' },
+    \ { 'type': 'commands' },
+    \ ]
+
+" bookmark examples
+let  g:startify_bookmarks =  [
+    \ {'v': '~/.config/nvim'},
+    \ {'d': '~/.config' }
+    \ ]
+
+" rainbow brackets
+let g:rainbow_active = 1
+
+" alias for common mistakes
+" function
+fun! SetupCommandAlias(from, to)
+  exec 'cnoreabbrev <expr> '.a:from
+        \ .' ((getcmdtype() is# ":" && getcmdline() is# "'.a:from.'")'
+        \ .'? ("'.a:to.'") : ("'.a:from.'"))'
+endfun
+
+" aliases
+ call SetupCommandAlias("W","w")
+ call SetupCommandAlias("Q","q")

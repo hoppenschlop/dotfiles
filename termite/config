@@ -1,12 +1,12 @@
 [options]
-allow_bold = true
+#allow_bold = true
 #audible_bell = false
 #bold_is_bright = true
 #cell_height_scale = 1.0
 #cell_width_scale = 1.0
 clickable_url = true
 dynamic_title = true
-font = Monospace 9
+font =  Knack Nerd Font 9
 #fullscreen = true
 #icon_name = terminal
 #mouse_autohide = false
@@ -17,13 +17,13 @@ font = Monospace 9
 scrollback_lines = 10000
 #search_wrap = true
 #urgent_on_bell = true
-#hyperlinks = false
+hyperlinks = true
 
 # $BROWSER is used by default if set, with xdg-open as a fallback
-#browser = xdg-open
+browser = firefox
 
 # "system", "on" or "off"
-#cursor_blink = system
+cursor_blink = off
 
 # "block", "underline" or "ibeam"
 cursor_shape = ibeam
@@ -38,62 +38,45 @@ cursor_shape = ibeam
 #size_hints = false
 
 # "off", "left" or "right"
-scrollbar = right
-
+#scrollbar = off
 
 [colors]
 
-# If both of these are unset, cursor falls back to the foreground color,
-# and cursor_foreground falls back to the background color.
-#cursor = #dcdccc
-#cursor_foreground = #dcdccc
-
-#foreground = #dcdccc
-#foreground_bold = #ffffff
-#background = #3f3f3f
-
-#links 20% background transparency (requires a compositor)
-background = rgba(63, 63, 63, 0.5)
-
-# If unset, will reverse foreground and background
-highlight = #2f2f2f
-
-# https://github.com/mashaal/wild-cherry
-
-#background= #1F1626
-#foreground= #FFFFFF
-#cursor=     #0F9DBA
+# special
+foreground      = #98d1ce
+foreground_bold = #98d1ce
+cursor          = #98d1ce
+background      = #0a0f14
 
 # black
-#color0  = #077fb1
-#color8  = #088bc1
+color0  = #0a0f14
+color8  = #10151b
 
 # red
-#color1  = #eb5cf9
-#color9  = #883cdb
+color1  = #e96d69
+color9  = #d1504c
 
 # green
-#color2  = #22d855
-#color10 = #29ad4e
+color2  = #26a98b
+color10 = #081f2d
 
 # yellow
-#color3  = #ffdf21
-#color11 = #c8a457
+color3  = #edb54b
+color11 = #245361
 
 # blue
-#color4  = #2746c2
-#color12 = #4b63c2
+color4  = #195465
+color12 = #093748
 
 # magenta
-#color5  = #38c7e4
-#color13 = #099bd7
+color5  = #453565
+color13 = #8f88a5
 
 # cyan
-#color6  = #c9085d
-#color14 = #c43a77
+color6  = #33859d
+color14 = #599caa
 
 # white
-#color7  = #fff8dd
-#color15 = #c2bca8
-
+color7  = #98d1ce
+color15 = #d3ebe9
 
