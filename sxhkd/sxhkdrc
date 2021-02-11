@@ -4,7 +4,7 @@
 
 # terminal emulator
 super + Return
-	termite
+	kitty
 
 # program launcher
 super + @space
@@ -19,7 +19,7 @@ super + Escape
 #
 
 # quit/restart bspwm
-super + shift + {e,r}
+super + shift + {e,s}
 	bspc {quit,wm -r}
 
 # close and kill
@@ -155,6 +155,9 @@ super + {h,j,k,l}
 # custom applauch keybinds
 super + r
   thunar
+
+super + shift + t
+  sudo thunar
 
 super + e
   firefox
